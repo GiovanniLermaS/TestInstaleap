@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity(), ClickMovieSeries, TabLayout.OnTabSelec
 
     override fun onTabSelected(tab: TabLayout.Tab?) {
         when (tab?.position) {
-            0 -> moviesAdapter?.updateResults(null, this)
-            1 -> moviesAdapter?.updateResults(MOVIE, this)
-            else -> moviesAdapter?.updateResults(SERIES, this)
+            0 -> moviesAdapter?.updateResults(null, supportActionBar)
+            1 -> moviesAdapter?.updateResults(MOVIE, supportActionBar)
+            else -> moviesAdapter?.updateResults(SERIES, supportActionBar)
         }
     }
 
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(), ClickMovieSeries, TabLayout.OnTabSelec
 
     private fun addObservers() {
         homeActivityViewModel.results.observe(this) {
-            moviesAdapter = MoviesAdapter(it, this, supportActionBar)
+            moviesAdapter = MoviesAdapter(it, this)
             binding?.rvMoviesSeries?.adapter = moviesAdapter
             progress.dismiss()
         }

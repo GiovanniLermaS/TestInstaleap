@@ -18,8 +18,7 @@ import com.example.testinstaleap.view.main.interfaces.ClickMovieSeries
 
 class MoviesAdapter(
     private val results: Results,
-    private val clickMovieSeries: ClickMovieSeries,
-    private val supportActionBar: ActionBar?
+    private val clickMovieSeries: ClickMovieSeries
 ) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
@@ -59,7 +58,7 @@ class MoviesAdapter(
         )
     }
 
-    fun updateResults(type: String?, context: Context) {
+    fun updateResults(type: String?, supportActionBar: ActionBar?) {
         results.moviesSeries.clear()
         results.moviesSeries.addAll(
             when (type) {

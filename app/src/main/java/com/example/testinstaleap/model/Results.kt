@@ -5,5 +5,5 @@ import com.google.gson.annotations.SerializedName
 class Results {
 
     @SerializedName("results")
-    val moviesSeries = ArrayList<MoviesSeries>()
+    val moviesSeries = ArrayList<MovieSeries>()
 }

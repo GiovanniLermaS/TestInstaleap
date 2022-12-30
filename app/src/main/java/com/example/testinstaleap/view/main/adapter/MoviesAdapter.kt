@@ -10,7 +10,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testinstaleap.R
 import com.example.testinstaleap.databinding.ViewMoviesSeriesBinding
-import com.example.testinstaleap.model.MoviesSeries
+import com.example.testinstaleap.model.MovieSeries
 import com.example.testinstaleap.model.Results
 import com.example.testinstaleap.utils.MOVIE
 import com.example.testinstaleap.utils.SERIES
@@ -22,7 +22,7 @@ class MoviesAdapter(
 ) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
-    private var temporalResults = ArrayList<MoviesSeries>()
+    private var temporalResults = ArrayList<MovieSeries>()
 
     init {
         temporalResults.addAll(results.moviesSeries)

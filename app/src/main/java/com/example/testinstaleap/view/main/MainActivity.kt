@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testinstaleap.databinding.ActivityMainBinding
-import com.example.testinstaleap.model.MoviesSeries
+import com.example.testinstaleap.model.MovieSeries
 import com.example.testinstaleap.utils.MOVIE
 import com.example.testinstaleap.utils.SERIES
 import com.example.testinstaleap.view.main.adapter.MoviesAdapter
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), ClickMovieSeries, TabLayout.OnTabSelec
         homeActivityViewModel.getResults()
     }
 
-    override fun onMovieSelected(moviesSeries: MoviesSeries) {}
+    override fun onMovieSelected(movieSeries: MovieSeries) {}
 
     override fun onTabReselected(tab: TabLayout.Tab?) {}
 

@@ -1,9 +1,9 @@
 package com.example.testinstaleap.view.main.interfaces
 
-import com.example.testinstaleap.model.MoviesSeries
+import com.example.testinstaleap.model.MovieSeries
 
 
 interface ClickMovieSeries {
 
-    fun onMovieSelected(moviesSeries: MoviesSeries)
+    fun onMovieSelected(movieSeries: MovieSeries)
 }
